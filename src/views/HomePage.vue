@@ -1,6 +1,6 @@
 <template>
   <LayoutComponent>
-    <h2>Hello</h2>
+    <h2 class="text-[red] font-ubuntu font-bold">Header</h2>
   </LayoutComponent>
 </template>
 
