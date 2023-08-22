@@ -1,0 +1,11 @@
+{
+    "offer": {
+        "title": "Sign up and get 20% off to your first order.",
+        "label": "Sign Up Now",
+        "link": "/signup"
+    },
+    "navigation": {
+        "logo": "SHOP.CO",
+        "logoUrl": "/"
+    }
+}
