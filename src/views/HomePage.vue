@@ -4,11 +4,6 @@
   </LayoutComponent>
 </template>
 
-<script>
-import LayoutComponent from '@/layout/LayoutComponent'
-export default {
-  components: {
-    LayoutComponent
-  }
-}
+<script setup>
+import LayoutComponent from '@/layout/LayoutComponent';
 </script>

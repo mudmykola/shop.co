@@ -4,7 +4,7 @@ import { XMarkIcon } from '@heroicons/vue/24/solid';
 </script>
 
 <template>
-    <div class="bg-c100">
+    <div class="bg-c100 w-full">
         <div class="container">
             <div class="flex items-center justify-center relative">
                 <div class="flex justify-center py-[0.625rem]">

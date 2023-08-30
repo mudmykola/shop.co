@@ -7,5 +7,9 @@
     "navigation": {
         "logo": "SHOP.CO",
         "logoUrl": "/"
+    },
+    "search": {
+        "placeholder": "Search for products...",
+        "submit": "Search"
     }
 }

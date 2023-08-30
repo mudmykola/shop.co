@@ -1,11 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue';
+import CheckoutPage from '@/views/checkout/CheckoutPage';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage
+    component: HomePage,
+    meta: { title: 'Home Page' }
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    component: CheckoutPage,
+    meta: { title: 'Checkout Page' }
   },
 ]
 
