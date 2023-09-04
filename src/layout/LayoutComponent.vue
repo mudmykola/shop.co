@@ -7,7 +7,7 @@ import FooterComponent from "@/components/footer/FooterComponent.vue";
 <template>
     <div class="wrapper flex flex-col justify-center items-center">
         <OfferComponent />
-        <NavigationComponent class=" container" />
+        <NavigationComponent class="container" />
         <main>
             <slot />
         </main>
