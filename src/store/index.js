@@ -1,14 +1,30 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+import axios from 'axios';
 
-export default createStore({
+const store = createStore({
   state: {
-  },
-  getters: {
+    products: [],
   },
   mutations: {
+    setProducts(state, products) {
+      state.products = products;
+    },
   },
   actions: {
+    async fetchProducts({ commit }) {
+      try {
+        const response = await axios.get('/product.json');
+        commit('setProducts', response.data);
+
+        localStorage.setItem('products', JSON.stringify(response.data));
+      } catch (error) {
+        console.error('Ошибка при загрузке продуктов:', error);
+      }
+    },
   },
-  modules: {
-  }
-})
+  getters: {
+    allProducts: (state) => state.products,
+  },
+});
+
+export default store;

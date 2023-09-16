@@ -4,6 +4,8 @@ import { ref } from 'vue';
 
 const headerImg = ref(require('@/assets/images/header-img.jpg'));
 const headerEl1 = ref(require('@/assets/images/header-el-1.png'));
+
+const link = ref('/shop');
 </script>
 
 <template>
@@ -13,6 +15,11 @@ const headerEl1 = ref(require('@/assets/images/header-el-1.png'));
         <h1 class="text-[4rem] font-ubuntu leading-[4rem] font-bold uppercase ">{{ content.header.title }}</h1>
         <p class="text-[1rem] font-normal text-c100 text-opacity-60">{{ content.header.desc }}</p>
         <div class="header-text__number"></div>
+        <router-link :to="link">
+     <Button class="bg-c100 text-default text-[1rem] font-medium w-[13.125rem] h-[3.313rem] rounded-[3.875rem] mt-[2.938rem]">
+        {{ content.header.btn }}
+      </Button>
+        </router-link>
       </div>
       <div class="header-img relative">
         <img :src="headerImg" alt="header-img" loading="lazy" />

@@ -15,6 +15,12 @@ const routes = [
     component: CheckoutPage,
     meta: { title: 'Checkout Page' }
   },
+  {
+    path: '/shop',
+    name: 'shop',
+    meta: { title: 'Shop Page' }
+  },
+
 ]
 
 const router = createRouter({

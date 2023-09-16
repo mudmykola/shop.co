@@ -1,9 +1,11 @@
 <script setup>
+import { defineProps, defineEmits } from 'vue';
 
+const { handleClick } = defineEmits(['click']);
 </script>
 
 <template>
-    <div>
-        Button
-    </div>
+   <button @click="handleClick">
+    <slot></slot>
+  </button>
 </template>
