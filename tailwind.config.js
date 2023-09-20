@@ -15,9 +15,7 @@ module.exports = {
 
         },
         extend: {
-            fill: {
-                filled: "red",
-            },
+
         },
         fontFamily: {
             'ubuntu': ['Ubuntu', 'sans-serif'],

@@ -1,6 +1,8 @@
 <script setup>
 import content from "@/data/content.json";
 import { ref } from 'vue';
+import HeaderStatisticComponent
+  from "@/components/header/HeaderStatisticComponent.vue";
 
 const headerImg = ref(require('@/assets/images/header-img.jpg'));
 const headerEl1 = ref(require('@/assets/images/header-el-1.png'));
@@ -20,6 +22,10 @@ const link = ref('/shop');
         {{ content.header.btn }}
       </Button>
         </router-link>
+
+        <div class="header-statistic">
+          <HeaderStatisticComponent />
+        </div>
       </div>
       <div class="header-img relative">
         <img :src="headerImg" alt="header-img" loading="lazy" />
