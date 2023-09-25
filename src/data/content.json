@@ -11,5 +11,18 @@
     "search": {
         "placeholder": "Search for products...",
         "submit": "Search"
+    },
+    "header": {
+        "title": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+        "desc": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+        "btn": "Shop Now",
+        "countTwoHundred": "International Brands",
+        "countTwoThousand": "High-Quality Products",
+        "countThirtyThousand": "Happy Customers"
+    },
+    "arrivals": {
+        "title": "NEW ARRIVALS",
+        "ratingNum": 5,
+        "btn": "View All"
     }
 }

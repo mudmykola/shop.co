@@ -35,10 +35,8 @@ const toggleSubMenu = (item) => {
                     <div v-for="subItem in item.subMenu" :key="subItem">
                         <router-link :to="subItem.link">{{ subItem.title }}</router-link>
                     </div>
-
                 </div>
             </li>
         </ul>
     </div>
 </template>
-  
