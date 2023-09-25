@@ -1,17 +1,18 @@
 <template>
-  <div class="counter-box flex pt-[3rem] items-center gap-[0.5rem]">
+  <div class="counter-box flex pt-[3rem] items-center gap-[1rem]">
     <div class="counter-1">
       <h2 class="font-bold text-[2.5rem]">{{ counter1 }}+</h2>
-      <span class="text-[1rem] font-normal text-c100 text-opacity-60">{{ content.header.countTwoHundred }}</span>
+      <span class="text-[0.75rem] font-normal text-c100 text-opacity-60">{{ content.header.countTwoHundred }}</span>
     </div>
+    <span class="counter-line w-[0.063rem] h-[4.625rem] bg-c100 opacity-20 items-center"></span>
     <div class="counter-2">
       <h2 class="font-bold text-[2.5rem]">{{ counter2 }}+</h2>
-      <span class="text-[1rem] font-normal text-c100 text-opacity-60">{{ content.header.countTwoThousand }}</span>
+      <span class="text-[0.75rem] font-normal text-c100 text-opacity-60">{{ content.header.countTwoThousand }}</span>
     </div>
-    <span class="counter-line"></span>
+    <span class="counter-line w-[0.063rem] h-[4.625rem] bg-c100 opacity-20 items-center"></span>
     <div class="counter-3">
       <h2 class="font-bold text-[2.5rem]">{{ counter3 }}+</h2>
-      <spon class="text-[1rem] font-normal text-c100 text-opacity-60">{{ content.header.countThirtyThousand }}</spon>
+      <spon class="text-[0.75rem] font-normal text-c100 text-opacity-60">{{ content.header.countThirtyThousand }}</spon>
     </div>
   </div>
 </template>

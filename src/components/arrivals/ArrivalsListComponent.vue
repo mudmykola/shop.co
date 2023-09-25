@@ -16,10 +16,10 @@
             <p>{{ product.rating }} / <span class="text-c100 text-opacity-60">{{ content.arrivals.ratingNum }}</span> </p>
           </div>
         </div>
-
         <p class="font-bold text-[1.5rem] leading-[1.875rem]">${{ product.price }}</p>
       </li>
     </ul>
+    <button class="flex m-auto border-[0.063rem] border-c100 border-opacity-10 text-[1rem] font-medium rounded-[3.875rem] py-[1rem] px-[3.375rem] mt-[2.25rem] mb-[4rem]">{{content.arrivals.btn}}</button>
   </div>
 </template>
 

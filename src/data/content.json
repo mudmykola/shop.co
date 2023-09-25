@@ -22,6 +22,7 @@
     },
     "arrivals": {
         "title": "NEW ARRIVALS",
-        "ratingNum": 5
+        "ratingNum": 5,
+        "btn": "View All"
     }
 }
