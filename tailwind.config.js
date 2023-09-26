@@ -11,6 +11,7 @@ module.exports = {
             'c101': '#F0F0F0',
             'c102': '#FFC633',
             'c103': '#F2F0F1',
+            'c104': '#F33',
             'default': '#ffff',
 
         },
