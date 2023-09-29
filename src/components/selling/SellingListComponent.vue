@@ -1,19 +1,19 @@
 <template>
-  <div class="product-list pt-[4.688rem]">
-    <h2 class="text-center font-bold text-[3rem] leading-[3.25rem]">
-      {{ content.arrivals.title }}
+  <div class="product-list">
+    <h2 class="text-center font-bold text-[3rem] leading-[3.25rem] uppercase">
+      {{ content.selling.title }}
     </h2>
     <ul class="flex items-center justify-center pt-[3.25rem] gap-[1.25rem]">
-      <li v-for="product in products" :key="product.id">
+      <li v-for="product in sellings" :key="product.id">
         <div class="product-image">
           <img
               class="w-[295px] h-[298px] rounded-[1.25rem]"
               :src="product.image + '?timestamp=' + Date.now()"
-              alt="product-image"
+              alt="selling-image"
               loading="lazy"
           />
         </div>
-        <h2 class="font-bold text-[1.25rem] leading-[1.563rem] pt-[1rem]">
+        <h2 class="font-bold text-[1.25rem] leading-[1.563rem] pt-[1rem] capitalize">
           {{ product.title }}
         </h2>
         <div class="rating flex items-center">
@@ -25,16 +25,16 @@
             >
               ★
             </span>
-            <span class="text-c102 text-[1.5rem]" :key="'empty-' + n" v-else
-            >☆</span
-            >
+            <span class="text-c102 text-[1.5rem]" :key="'empty-' + n" v-else>
+              ☆
+            </span>
           </template>
           <div class="rating-num pl-[0.813rem]">
             <p>
               {{ product.rating }} /
-              <span class="text-c100 text-opacity-60">{{
-                  content.arrivals.ratingNum
-                }}</span>
+              <span class="text-c100 text-opacity-60">
+                {{ content.selling.ratingNum }}
+              </span>
             </p>
           </div>
         </div>
@@ -42,9 +42,9 @@
           <p class="font-bold text-[1.5rem] leading-[1.875rem]">
             ${{ product.price }}
           </p>
-          <span class="text-[1.5rem] text-c100 text-opacity-40 font-bold">{{
-              product.noDiscount
-            }}</span>
+          <span class="text-[1.5rem] text-c100 text-opacity-40 font-bold">
+            {{ product.noDiscount }}
+          </span>
           <h2
               class="text-c104 text-[0.75rem] font-medium bg-c104 bg-opacity-10 px-[14px] py-[6px] rounded-[62px]"
           >
@@ -57,11 +57,8 @@
         class="arrivals-btn flex m-auto border-[0.063rem] border-c100 border-opacity-10 text-[1rem] font-medium rounded-[3.875rem] py-[1rem] px-[3.375rem] mt-[2.25rem] mb-[4rem] transition ease-out hover:ease-in hover:bg-c100 hover:text-default hover:transition-all hover:shadow-lg hover:shadow-c101"
         @click="showArrivals = !showArrivals"
     >
-      {{ content.arrivals.btn }}
+      {{ content.selling.btn }}
     </button>
-    <div class="arrivals-border w-full h-full border-b border-b-[0.063rem] border-b-c100 border-opacity-20 mb-[4rem]">
-      <span></span>
-    </div>
   </div>
 </template>
 
@@ -71,23 +68,21 @@ import { useStore } from "vuex";
 import { onMounted, ref } from "vue";
 
 const store = useStore();
-const products = ref([]);
+const sellings = ref([]);
 
-const getProductsData = () => {
-  const savedProducts = localStorage.getItem("products");
-  if (savedProducts) {
-    return JSON.parse(savedProducts);
+const getSellingsData = () => {
+  const savedSellings = localStorage.getItem("sellings");
+  if (savedSellings) {
+    return JSON.parse(savedSellings);
   }
-  return store.getters.allProducts;
+  return store.getters.allSellings;
 };
 
-products.value = getProductsData();
-
-const maxVisibleProducts = 4;
+sellings.value = getSellingsData();
 
 onMounted(() => {
-  store.dispatch("fetchProducts").then(() => {
-    products.value = getProductsData().slice(0, maxVisibleProducts);
+  store.dispatch("fetchSellings").then(() => {
+    sellings.value = getSellingsData();
   });
 });
 </script>

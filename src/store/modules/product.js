@@ -12,7 +12,7 @@ export default {
     actions: {
         async fetchProducts({ commit }) {
             try {
-                const response = await axios.get('/product.json');
+                const response = await axios.get('https://test-api-mudmykola.vercel.app/product-api.json');
                 commit('setProducts', response.data);
 
                 localStorage.setItem('products', JSON.stringify(response.data));
