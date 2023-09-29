@@ -24,5 +24,10 @@
         "title": "NEW ARRIVALS",
         "ratingNum": 5,
         "btn": "View All"
+    },
+    "selling": {
+        "title": "top selling",
+        "ratingNum": 5,
+        "btn": "View All"
     }
 }
