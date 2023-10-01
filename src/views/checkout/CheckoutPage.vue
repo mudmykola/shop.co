@@ -1,6 +1,5 @@
 <script setup>
 import LayoutComponent from '@/layout/LayoutComponent';
-
 </script>
 
 <template>
