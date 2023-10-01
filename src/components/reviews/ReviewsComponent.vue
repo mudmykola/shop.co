@@ -4,7 +4,7 @@ import ReviewsSwiperComponent
 </script>
 
 <template>
-  <div class="reviews">
+  <div class="reviews py-[5rem]">
     <div class="container">
       <ReviewsSwiperComponent/>
     </div>
