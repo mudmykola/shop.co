@@ -4,8 +4,8 @@
       {{ content.arrivals.title }}
     </h2>
     <ul class="flex items-center justify-center pt-[3.25rem] gap-[1.25rem]">
-      <li v-for="product in products" :key="product.id">
-        <div class="product-image">
+      <li class="cursor-pointer" v-for="product in products" :key="product.id">
+        <div class="product-image transition-all hover:shadow-xl hover:duration-700 rounded-[1.25rem]">
           <img
               class="w-[295px] h-[298px] rounded-[1.25rem]"
               :src="product.image + '?timestamp=' + Date.now()"
@@ -42,11 +42,12 @@
           <p class="font-bold text-[1.5rem] leading-[1.875rem]">
             ${{ product.price }}
           </p>
-          <span class="text-[1.5rem] text-c100 text-opacity-40 font-bold">{{
+          <span class="text-[1.5rem] text-c100 text-opacity-40 font-bold line-through">{{
               product.noDiscount
             }}</span>
           <h2
               class="text-c104 text-[0.75rem] font-medium bg-c104 bg-opacity-10 px-[14px] py-[6px] rounded-[62px]"
+              v-if="product.discount"
           >
             {{ product.discount }}
           </h2>
@@ -54,7 +55,7 @@
       </li>
     </ul>
     <button
-        class="arrivals-btn flex m-auto border-[0.063rem] border-c100 border-opacity-10 text-[1rem] font-medium rounded-[3.875rem] py-[1rem] px-[3.375rem] mt-[2.25rem] mb-[4rem] transition ease-out hover:ease-in hover:bg-c100 hover:text-default hover:transition-all hover:shadow-lg hover:shadow-c101"
+        class="arrivals-btn flex m-auto border-[0.063rem] border-c100 border-opacity-10 text-[1rem] font-medium rounded-[3.875rem] py-[1rem] px-[3.375rem] mt-[2.25rem] mb-[4rem] transition ease-out hover:ease-in hover:bg-c100 hover:text-default hover:duration-300 transition-all ease-in duration-150 hover:shadow-lg hover:shadow-c101"
         @click="showArrivals = !showArrivals"
     >
       {{ content.arrivals.btn }}

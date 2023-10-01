@@ -29,5 +29,12 @@
         "title": "top selling",
         "ratingNum": 5,
         "btn": "View All"
+    },
+    "headerMenu": {
+        "title": "BROWSE BY dress STYLE",
+        "linkCasual": "Casual",
+        "linkFormal": "Formal",
+        "linkParty": "Party",
+        "linkGym": "Gym"
     }
 }
