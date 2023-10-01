@@ -5,7 +5,8 @@
     </h2>
     <ul class="flex items-center justify-center pt-[3.25rem] gap-[1.25rem]">
       <li class="cursor-pointer" v-for="product in products" :key="product.id">
-        <div class="product-image transition-all hover:shadow-xl hover:duration-700 rounded-[1.25rem]">
+        <div
+            class="product-image transition-all hover:shadow-xl hover:duration-700 rounded-[1.25rem]">
           <img
               class="w-[295px] h-[298px] rounded-[1.25rem]"
               :src="product.image + '?timestamp=' + Date.now()"
@@ -22,9 +23,7 @@
                 class="filled text-c102 text-[1.5rem]"
                 :key="'filled-' + n"
                 v-if="n <= product.rating"
-            >
-              ★
-            </span>
+            >★</span>
             <span class="text-c102 text-[1.5rem]" :key="'empty-' + n" v-else
             >☆</span
             >
@@ -42,7 +41,8 @@
           <p class="font-bold text-[1.5rem] leading-[1.875rem]">
             ${{ product.price }}
           </p>
-          <span class="text-[1.5rem] text-c100 text-opacity-40 font-bold line-through">{{
+          <span
+              class="text-[1.5rem] text-c100 text-opacity-40 font-bold line-through">{{
               product.noDiscount
             }}</span>
           <h2
@@ -60,7 +60,8 @@
     >
       {{ content.arrivals.btn }}
     </button>
-    <div class="arrivals-border w-full h-full border-b border-b-[0.063rem] border-b-c100 border-opacity-20 mb-[4rem]">
+    <div
+        class="arrivals-border w-full h-full border-b border-b-[0.063rem] border-b-c100 border-opacity-20 mb-[4rem]">
       <span></span>
     </div>
   </div>
@@ -68,8 +69,8 @@
 
 <script setup>
 import content from "@/data/content.json";
-import { useStore } from "vuex";
-import { onMounted, ref } from "vue";
+import {useStore} from "vuex";
+import {onMounted, ref} from "vue";
 
 const store = useStore();
 const products = ref([]);
