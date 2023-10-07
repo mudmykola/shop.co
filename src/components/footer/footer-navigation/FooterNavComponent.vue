@@ -1,6 +1,9 @@
 <script setup>
+import FooterLogoComponent from "../footer-navigation/footer-logo/FooterLogoComponent.vue";
 </script>
 
 <template>
-  <div>Footer Nav Component</div>
+  <div>
+    <FooterLogoComponent />
+  </div>
 </template>
