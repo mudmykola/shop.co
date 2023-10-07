@@ -39,5 +39,9 @@
     },
     "reviews": {
         "title": "OUR HAPPY CUSTOMERS"
+    },
+    "footer": {
+        "contactFormTitle": "STAY UPTO DATE ABOUT OUR LATEST OFFERS",
+        "contactFormSend": "Subscribe to Newsletter"
     }
 }

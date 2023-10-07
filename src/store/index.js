@@ -2,6 +2,7 @@ import {createStore} from "vuex";
 import product from "./modules/product";
 import selling from "./modules/selling";
 import reviews from "./modules/reviews";
+import username from "./modules/usersname";
 
 export default createStore({
     state: {},
@@ -11,6 +12,7 @@ export default createStore({
     modules: {
         product,
         selling,
-        reviews
+        reviews,
+        username,
     },
 });
